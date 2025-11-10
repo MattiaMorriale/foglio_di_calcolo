@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="it">
+<head>
+<meta charset="UTF-8" />
+<title>Analisi Affitti Brevi</title>
+<link rel="stylesheet" href="style.css">
+</head>
+<body>
+<div class="container">
+<h1>ANALISI AFFITTO BREVI</h1>
+<div class="grid">
+    <div class="field"><label>Nome struttura:</label><input type="text" id="nome"></div>
+    <div class="field"><label>Località / Comune:</label><input type="text" id="localita"></div>
+    <div class="field"><label>Metratura (mq):</label><input type="number" id="mq"></div>
+    <div class="field"><label>Numero camere da letto:</label><input type="number" id="camere"></div>
+    <div class="field"><label>Numero bagni:</label><input type="number" id="bagni"></div>
+    <div class="field"><label>Posti letto totali:</label><input type="number" id="posti_letto"></div>
+    <div class="field"><label>Prezzo d'acquisto (€):</label><input type="number" id="prezzo_acquisto"></div>
+    <div class="field"><label>Costo ristrutturazione (€):</label><input type="number" id="costo_ristrutturazione"></div>
+    <div class="field"><label>ADR (€):</label><input type="number" id="adr"></div>
+    <div class="field"><label>Occupazione (%) :</label><input type="number" id="occupazione"></div>
+    <div class="field"><label>Costi mensili (€):</label><input type="number" id="costi_mensili"></div>
+</div>
+<button onclick="analisiAffitto()">Calcola Analisi</button>
+<div class="result" id="risultati"></div>
+</div>
+
+<script src="script.js"></script>
+
+
+</body>
+</html>
