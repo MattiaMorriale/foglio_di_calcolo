@@ -2,28 +2,49 @@
 <html lang="it">
 <head>
 <meta charset="UTF-8" />
-<title>Analisi Affitti Brevi</title>
+<title>Analisi Immobiliare</title>
 <link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div class="container">
-<h1>ANALISI AFFITTO BREVI</h1>
+
+    <div class="container">
+<h2 style="color:#0077cc;margin:0 0 14px 0;">Analisi Immobiliare per Affitti Brevi — Sicilia (Esteso)</h2>
 <div class="grid">
-    <div class="field"><label>Nome struttura:</label><input type="text" id="nome"></div>
-    <div class="field"><label>Località / Comune:</label><input type="text" id="localita"></div>
-    <div class="field"><label>Metratura (mq):</label><input type="number" id="mq"></div>
-    <div class="field"><label>Numero camere da letto:</label><input type="number" id="camere"></div>
-    <div class="field"><label>Numero bagni:</label><input type="number" id="bagni"></div>
-    <div class="field"><label>Posti letto totali:</label><input type="number" id="posti_letto"></div>
-    <div class="field"><label>Prezzo d'acquisto (€):</label><input type="number" id="prezzo_acquisto"></div>
-    <div class="field"><label>Costo ristrutturazione (€):</label><input type="number" id="costo_ristrutturazione"></div>
-    <div class="field"><label>ADR (€):</label><input type="number" id="adr"></div>
-    <div class="field"><label>Occupazione (%) :</label><input type="number" id="occupazione"></div>
-    <div class="field"><label>Costi mensili (€):</label><input type="number" id="costi_mensili"></div>
+  <div class="field"><label>Nome struttura</label><input id="nome" type="text" placeholder="Villa Azzurra"></div>
+  <div class="field"><label>Località / Comune</label><input id="localita" type="text" placeholder="Cefalù"></div>
+
+  <div class="field"><label>Superficie (mq)</label><input id="superficie_mq" type="number"></div>
+  <div class="field"><label>Camere</label><input id="camere" type="number"></div>
+
+  <div class="field"><label>Bagni</label><input id="bagni" type="number"></div>
+  <div class="field"><label>Posti letto</label><input id="posti_letto" type="number"></div>
+
+  <div class="field"><label>Prezzo d'acquisto (€)</label><input id="prezzo_acquisto" type="number"></div>
+  <div class="field"><label>Costo ristrutturazione (€)</label><input id="costo_ristrutturazione" type="number"></div>
+
+  <div class="field"><label>ADR — tariffa media giornaliera (€)</label><input id="adr" type="number"></div>
+  <div class="field"><label>Occupazione (%, 0-100)</label><input id="occupazione" type="number" value="70"></div>
+
+  <div class="field"><label>Costi gestione mensili (€)</label><input id="costi_gestione_mensili" type="number"></div>
+  <div class="field"><label>Capitale proprio (€)</label><input id="capitale_proprio" type="number"></div>
+
+  <div class="field"><label>Importo mutuo (€)</label><input id="importo_mutuo" type="number"></div>
+  <div class="field"><label>Tasso interesse annuo (%)</label><input id="tasso_interesse" type="number" step="0.01" value="3.5"></div>
+
+  <div class="field"><label>Durata mutuo (anni)</label><input id="durata_mutuo" type="number" value="20"></div>
+  <div class="field"><label>Costo opportunità del capitale (%)</label><input id="costo_capitale" type="number" step="0.1" value="5"></div>
 </div>
-<button onclick="analisiAffitto()">Calcola Analisi</button>
-<div class="result" id="risultati"></div>
+
+<div class="controls">
+  <button id="btnCalc" type="button">Calcola Analisi</button>
+  <button id="btnJSON" class="secondary" type="button">Mostra JSON</button>
+  <button id="btnCopy" class="secondary" type="button">Copia JSON</button>
 </div>
+
+<div id="risultati" class="result small"></div>
+<div id="jsonArea" style="display:none;margin-top:12px;"><pre id="jsonOut" class="jsonout"></pre></div>
+</div>
+
 
 <script src="script.js"></script>
 
